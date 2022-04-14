@@ -98,6 +98,8 @@ if (sum <= 20) {
 
 console.log(hasBlackJack)
 
+// it worked
+
 
 
 

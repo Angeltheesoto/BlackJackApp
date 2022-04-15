@@ -1,104 +1,56 @@
 
-// let firstName = 'Angel';
-// let lastName = 'Soto';
-
-// let fullName = firstName + " " + lastName;
-
-// console.log(fullName);
-
-
- //---------------------------------
-// let name = 'Linda';
-// let greeting = 'Hi there';
-
-
-// function greet() {
-//  console.log(greeting + ", " + name + "!")
-// };
-
-// greet();
- // ---------------------------
-
-// let myPoints = 3;
-
-// function add3Points() {
-//  myPoints += 3
-// };
-
-// function remove1Point() {
-//  myPoints -= 1
-// };
-
-// add3Points()
-// add3Points()
-// add3Points()
-// remove1Point()
-// remove1Point()
-
-// console.log(myPoints);
-
- // ----------------------------------
-
- // let error = document.getElementById('error');
-
- // function problem() {
- //  console.log("button clicked")
- //  error.textContent = "Something went wrong, please try again."
- // }
-
- //-------------------------------------
-
-// practice calculator------------------------------------------------
- // let num1 = 100;
- // let num2 = 100;
- // document.getElementById("num1-el").textContent = num1;
- // document.getElementById("num2-el").textContent = num2;
- // let sum = document.getElementById('sum-el')
-
- // function add() {
- //  sum.textContent = 'Sum: ' + (num1 + num2)
- // };
-
- // function subtract() {
- //  sum.textContent = 'Sum: ' + (num1 - num2)
- // };
-
- // function divide() {
- //  sum.textContent = 'Sum: ' + (num1 / num2)
- // };
-
- // function multiply() {
- //  sum.textContent = 'Sum: ' + (num1 * num2)
- // };
-
- // function reset() {
- //  sum.textContent = 'Sum: ' 
- // };
-
-
 // black Jack app ---------------------
 
 let firstCard = 10;
 let secondCard = 11;
+let cards = [
+ firstCard,
+ secondCard
+]
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
-let isAlive = true
+let isAlive = true;
+let cardsEl = document.getElementById('cards-el');
+let message = document.getElementById('message-el');
+let sumEl = document.querySelector('#sum-el');
 
-if (sum <= 20) {
- console.log("Do you want to draw a new card?")
-} else if (sum === 21) {
- console.log("Whoo! You've got BlackJack!")
- hasBlackJack = true
-} else {
- console.log("You're out of the game!")
- isAlive = false
+
+
+function startGame() {
+ renderGame();
 }
 
-// cash out!
+function renderGame() {
 
-console.log(hasBlackJack)
+  cardsEl.textContent = 'Cards: ' + cards[0] + ' - ' + cards[1];
+  sumEl.textContent = "Sum: " + sum;
 
-// it worked
+  if (sum <= 20) {
+  message.textContent = "Do you want to draw a new card?"
+ } else if (sum === 21) {
+  message.textContent = "Whoo! You've got BlackJack!"
+  hasBlackJack = true
+ } else {
+  message.textContent = "You're out of the game!"
+  isAlive = false
+ }
+}
+
+function newCard() {
+ let card = 6;
+ sum += card;
+ cards.push(card);
+ console.log(cards)
+ renderGame()
+}
+
+
+
+
+
+
+
+
 
 
 

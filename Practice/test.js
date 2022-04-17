@@ -148,16 +148,117 @@
 //  console.log("Generating certificate....")
 // };
 
-let hasSolvedChallenge = false;
-let hasHintsLeft = false;
+// let hasSolvedChallenge = true;
+// let hasHintsLeft = true;
 
-if (hasSolvedChallenge === false && hasHintsLeft === false) {
- showSolution()
+// if (hasSolvedChallenge === false || hasHintsLeft === false) {
+//  showSolution()
+// };
+
+// function showSolution() {
+//  console.log("showing the solution....")
+// };
+
+// let likesDocumentaries = true;
+// let likesStartups = true;
+
+// function recommendMovie() {
+//  if (likesDocumentaries === true || likesStartups === true){
+//   console.log("Hey, check out this new film we think you will like!")
+//  }
+// }
+// console.log(recommendMovie())
+
+// or like this ->
+
+// if (likesDocumentaries === true || likesStartups === true){
+//   recommendMovie()
+//  }
+
+// function recommendMovie() {
+//  console.log("Hey, check out this new film we think you will like!")
+// }
+
+// objects------------------------------
+
+// let course = {
+//  title: 'Learn CSS Grid for free',
+//  lesson: 16,
+//  creator: "Per, Harald Borgen",
+//  length: 63, 
+//  level: 2,
+//  isFree: true,
+//  tags: [
+//   "html",
+//   "css"
+//  ]
+// }
+
+// console.log( course.tags[1])
+
+
+// let castle = {
+//  title: "Live like a king in my castle",
+//  price: 190,
+//  isSuperHost: true,
+//  images: [
+//   "img/castle.png",
+//   "img/castle2.png"
+//  ]
+// }
+
+// console.log(castle.price)
+
+// more practice
+
+
+// Review 1- Objects and functions
+let sentence = document.getElementById('greeting-el');
+let person = {
+ name: 'Angel',
+ age: 24,
+ country: 'America'
 };
 
-function showSolution() {
- console.log("showing the solution....")
+function logData() {
+  sentence.textContent = person.name + ' is ' + person.age + ' years old and lives in ' + person.country + '.'
+ }
+ logData()
+
+
+// Review 2- if else/ conditional statements
+let age = 67;
+let idOne = document.getElementById('idOne');
+
+if (age < 6) {
+ idOne.textContent = 'Free'
+} else if (age < 18) {
+ idOne.textContent = 'Child Discount'
+} else if (age < 27) {
+ idOne.textContent = 'Student Discount'
+} else if (age < 67) {
+ idOne.textContent = 'Full Price'
+} else {
+ idOne.textContent = 'Senior Citizen Discount'
 };
+
+// Review 3- Loops and Arrays
+let idTwo = document.getElementById('idTwo');
+let largeCountries = ["China", "India", "USA", "Indonesia", "Pakistan"]
+
+idTwo.innerHTML = "The five largest countries in the world:";
+  for (let i = 0; i < largeCountries.length; i++) {
+   
+   idTwo.textContent += ' ' + largeCountries[i]
+  };
+
+// Review 4- push, pop, unshift, shift challenge
+
+let fixLargeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"];
+
+
+
+
 
 
 

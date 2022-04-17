@@ -2,14 +2,28 @@
 // black Jack app ---------------------
 
 
-
-let cards = []
+// variables----
+let cards = [];
 let sum = 0;
 let hasBlackJack = false;
 let isAlive = false;
 let message = document.getElementById('message-el');
 let sumEl = document.querySelector('#sum-el');
 let cardsEl = document.getElementById('cards-el');
+let playerEl = document.getElementById("player-el");
+let player = {
+  name: "Per",
+  chips: 200,
+  sayHello: function() {
+    console.log("Hi Amber!")
+  }
+};
+
+player.sayHello()
+
+// variables----
+playerEl.textContent = player.name + ": $" + player.chips;
+
 
 console.log(cards)
 
@@ -55,11 +69,14 @@ function renderGame() {
 }
 
 function newCard() {
- let card = getRandomCard();
- sum += card;
- cards.push(card);
- console.log(cards)
- renderGame()
+
+  if (isAlive === true && sum !== 21) {
+    let card = getRandomCard();
+    sum += card;
+    cards.push(card);
+    console.log(cards)
+    renderGame()
+  }
 }
 
 

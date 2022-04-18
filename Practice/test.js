@@ -209,7 +209,19 @@
 
 // console.log(castle.price)
 
+
+
+
+
+
+
+
+
+
+
+
 // more practice
+
 
 
 // Review 1- Objects and functions
@@ -228,7 +240,7 @@ function logData() {
 
 // Review 2- if else/ conditional statements
 let age = 67;
-let idOne = document.getElementById('idOne');
+let idOne = document.getElementById('idOne')
 
 if (age < 6) {
  idOne.textContent = 'Free'
@@ -253,11 +265,43 @@ idTwo.innerHTML = "The five largest countries in the world:";
   };
 
 // Review 4- push, pop, unshift, shift challenge
-
+let idThree = document.getElementById('idThree');
 let fixLargeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"];
 
+fixLargeCountries.shift()
+fixLargeCountries.unshift("China")
+fixLargeCountries.pop()
+fixLargeCountries.push("Pakistan")
+
+for (let j = 0; j < fixLargeCountries.length; j++) {
+  
+  idThree.textContent += fixLargeCountries[j] + ' '
+};
+
+// Review 5- Logical Operators
+let dayOfMonth = 13;
+let weekday = "Friday";
+let idFour = document.getElementById('idFour');
+
+if (dayOfMonth === 13 && weekday === "Friday") {
+  idFour.textContent = "Spoky Face Emoji"
+}
 
 
+// Review 6- Rock paper scissors
+let hands = ["rock", "paper", "scissor"];
+
+function getHand() {
+  let randomNum = Math.floor(Math.random() * 3)
+  return hands[randomNum]
+};
+
+console.log(getHand())
+
+// Review 7- Sorting Fruits
+let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"];
+let appleShelf = document.getElementById("apple-shelf");
+let orangeShelf = document.getElementById("orange-shelf");
 
 
 

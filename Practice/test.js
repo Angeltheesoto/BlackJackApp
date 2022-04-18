@@ -304,7 +304,9 @@ let appleShelf = document.getElementById("apple-shelf");
 let orangeShelf = document.getElementById("orange-shelf");
 
 
-
+function sorting() {
+  for (let a = 0; a < fruit.length; a++) { }
+}
 
 
 

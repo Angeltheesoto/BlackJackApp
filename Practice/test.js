@@ -220,7 +220,8 @@
 
 
 
-// more practice
+// more practice/ Review
+// Javascript Programming - Full Course - start - 4:16
 
 
 
@@ -305,8 +306,17 @@ let orangeShelf = document.getElementById("orange-shelf");
 
 
 function sorting() {
-  for (let a = 0; a < fruit.length; a++) { }
+  for (let a = 0; a < fruit.length; a++) {
+    if (fruit[a] === "🍎") {
+      appleShelf.textContent += "🍎"
+    } else if (fruit[a] === "🍊") {
+      orangeShelf.textContent += "🍊"
+    }
+  }
 }
+sorting();
 
+// Javascript Programming - Full Course - end - 4:33
 
+// Build chrome Extension -
 

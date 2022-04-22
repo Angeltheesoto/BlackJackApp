@@ -49,7 +49,23 @@ button:hover {
  text-decoration: underline;
 } */
 
+#apple-shelf {
+ width: 50%;
+ height: 5rem;
+ margin: 1rem;
+ border-radius: 10px;
+ background-color: red;
+ opacity: .5;
+}
 
+#orange-shelf {
+ width: 50%;
+ height: 5rem;
+ margin: 1rem;
+ border-radius: 10px;
+ background-color: orange;
+ opacity: .5;
+}
 
 
 
